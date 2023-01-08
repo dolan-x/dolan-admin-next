@@ -24,7 +24,7 @@
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^0.8.1",
     "@mini-cz/config-default": "^0.1.2",
-    "@so1ve/eslint-config": "^0.38.1",
+    "@so1ve/eslint-config": "^0.39.0",
     "@types/node": "^18.11.18",
     "@types/nprogress": "^0.2.0",
     "@unocss/reset": "^0.48.3",
