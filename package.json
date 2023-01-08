@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --fix --ignore-path .gitignore"
+    "lint": "eslint . --fix --ignore-path .gitignore",
+    "commit": "mcz"
   },
   "dependencies": {
     "@mdi/font": "7.1.96",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^0.8.1",
+    "@mini-cz/config-default": "^0.1.2",
     "@so1ve/eslint-config": "^0.38.1",
     "@types/node": "^18.11.18",
     "@types/nprogress": "^0.2.0",
@@ -29,6 +31,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.31.0",
     "fontaine": "^0.2.3",
+    "mini-cz": "^0.1.2",
     "typescript": "^4.9.4",
     "unocss": "^0.48.3",
     "unplugin-auto-import": "^0.12.1",
