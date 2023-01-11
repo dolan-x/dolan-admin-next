@@ -1,5 +1,5 @@
 import { URL, fileURLToPath } from "node:url";
-import path from "node:path";
+import { dirname, resolve } from "node:path";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import Vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
@@ -40,7 +40,7 @@ export default defineConfig({
       runtimeOnly: true,
       compositionOnly: true,
       fullInstall: true,
-      include: [path.resolve(__dirname, "src/locales/**")],
+      include: resolve(dirname(fileURLToPath(import.meta.url)), "./src/locales/**"),
     }),
     Pages(),
     Layouts(),

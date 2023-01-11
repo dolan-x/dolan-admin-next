@@ -4,24 +4,24 @@
 
 <template>
   <VContainer class="fill-height">
-    <VResponsive class="d-flex align-center text-center fill-height">
+    <VResponsive class="align-center d-flex fill-height text-center">
       <VImg
         contain
         height="300"
         src="@/assets/logo.svg"
       />
 
-      <div class="text-body-2 font-weight-light mb-n1">
+      <div class="font-weight-light mb-n1 text-body-2">
         Welcome to
       </div>
 
-      <h1 class="text-h2 font-weight-bold">
+      <h1 class="font-weight-bold text-h2">
         Vuetify
       </h1>
 
       <div class="py-14" />
 
-      <VRow class="d-flex align-center justify-center">
+      <VRow class="align-center d-flex justify-center">
         <VCol cols="auto">
           <VBtn
             href="https://next.vuetifyjs.com/components/all/"

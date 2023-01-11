@@ -3,12 +3,19 @@ import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts
 export default defineConfig({
   presets: [
     presetUno(),
-    presetIcons(),
+    presetIcons({
+      scale: 1.2,
+      extraProperties: {
+        "display": "inline-block",
+        "height": "1.4em",
+        "width": "1.4em",
+        "vertical-align": "text-bottom",
+      },
+    }),
     presetAttributify(),
     presetWebFonts({
       fonts: {
-        sans: "Roboto",
-        mono: ["Fira Code", "Fira Mono:400,700"],
+        main: ["Fira Code", "Noto Serif SC"],
       },
     }),
   ],
