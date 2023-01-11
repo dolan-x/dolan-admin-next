@@ -1,4 +1,5 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts } from "unocss";
+import { defineConfig, presetAttributify, presetIcons, presetUno, transformerDirectives, transformerVariantGroup } from "unocss";
+import presetRemToPx from "@unocss/preset-rem-to-px";
 
 export default defineConfig({
   presets: [
@@ -13,10 +14,10 @@ export default defineConfig({
       },
     }),
     presetAttributify(),
-    presetWebFonts({
-      fonts: {
-        main: ["Fira Code", "Noto Serif SC"],
-      },
-    }),
+    presetRemToPx(),
+  ],
+  transformers: [
+    transformerDirectives(),
+    transformerVariantGroup(),
   ],
 });

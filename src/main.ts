@@ -5,6 +5,7 @@ import { registerPlugins } from "@/plugins";
 
 import "@unocss/reset/tailwind.css";
 import "uno.css";
+import "./style.css";
 
 const app = createApp(App);
 

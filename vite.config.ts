@@ -9,6 +9,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import I18n from "@intlify/unplugin-vue-i18n/vite";
 import Pages from "vite-plugin-pages";
 import Layouts from "vite-plugin-vue-layouts";
+import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
 import { FontaineTransform } from "fontaine";
 
 export default defineConfig({
@@ -44,6 +45,10 @@ export default defineConfig({
     }),
     Pages(),
     Layouts(),
+    ViteWebfontDownload([
+      "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap",
+      "https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap",
+    ]),
     FontaineTransform.vite({
       fallbacks: ["BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Arial", "Noto Sans"],
     }),

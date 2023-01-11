@@ -8,7 +8,7 @@ interface Item {
 
 const { t, locale } = useI18n();
 
-let drawer = $ref(true);
+let drawer = $ref(false);
 
 const locales = {
   "en": "English",
@@ -19,14 +19,38 @@ const items: Item[] = $computed(() => [
   {
     title: t("pages.dashboard.label"),
     value: "dashboard",
-    to: "/",
+    to: "/dash/",
     icon: "i-carbon:dashboard",
   },
   {
     title: t("pages.posts.label"),
     value: "posts",
-    to: "/posts",
+    to: "/dash/posts",
     icon: "i-carbon:document",
+  },
+  {
+    title: t("pages.pages.label"),
+    value: "pages",
+    to: "/dash/pages",
+    icon: "i-carbon:book",
+  },
+  {
+    title: t("pages.tags.label"),
+    value: "tags",
+    to: "/dash/tags",
+    icon: "i-carbon:tag-group",
+  },
+  {
+    title: t("pages.categories.label"),
+    value: "categories",
+    to: "/dash/categories",
+    icon: "i-carbon:categories",
+  },
+  {
+    title: t("pages.config.label"),
+    value: "config",
+    to: "/dash/config",
+    icon: "i-carbon:settings",
   },
 ]);
 
@@ -35,7 +59,7 @@ const switchLang = (name: keyof typeof locales) => { locale.value = name; };
 </script>
 
 <template>
-  <VApp class="font-main">
+  <VApp>
     <VLayout>
       <VAppBar
         color="primary"
@@ -78,13 +102,13 @@ const switchLang = (name: keyof typeof locales) => { locale.value = name; };
             :to="item.to"
           >
             <template #prepend>
-              <span class="m-[10px]" :class="item.icon" />
+              <span :class="item.icon" m="2.5" />
             </template>
             {{ item.title }}
           </VListItem>
         </VList>
       </VNavigationDrawer>
-      <VMain>
+      <VMain m="5">
         <RouterView />
       </VMain>
     </VLayout>
