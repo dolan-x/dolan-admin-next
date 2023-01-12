@@ -2,6 +2,7 @@ import { URL, fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
+import VueMacros from "unplugin-vue-macros/vite";
 import Vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 import Unocss from "unocss/vite";
 import VueComponents from "unplugin-vue-components/vite";
@@ -13,10 +14,21 @@ import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
 import { FontaineTransform } from "fontaine";
 
 export default defineConfig({
+  envPrefix: [
+    "VITE_",
+    "DOLAN_",
+  ],
   plugins: [
-    Vue({
-      template: { transformAssetUrls },
-      reactivityTransform: true,
+    VueMacros({
+      plugins: {
+        vue: Vue({
+          template: { transformAssetUrls },
+          reactivityTransform: true,
+        }),
+      },
+      defineModel: {
+        unified: false,
+      },
     }),
     Vuetify({
       autoImport: true,
@@ -24,6 +36,7 @@ export default defineConfig({
     Unocss(),
     VueComponents({
       dts: "./src/components.d.ts",
+      directoryAsNamespace: true,
     }),
     AutoImport({
       dts: "./src/auto-imports.d.ts",
@@ -35,7 +48,15 @@ export default defineConfig({
         "pinia",
         "vue-router",
         "vue-i18n",
+        {
+          "vue-toastification": ["useToast"],
+        },
       ],
+      dirs: [
+        "./src/composables/**",
+        "./src/stores/**",
+      ],
+      vueTemplate: true,
     }),
     I18n({
       runtimeOnly: true,

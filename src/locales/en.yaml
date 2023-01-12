@@ -145,7 +145,7 @@ login:
   signup-failed: Signup failed!
   logout-success: Logout successfully!
 not-found:
-  not-found: Not found
+  not-found: Page Not found :(
   back: Back
 components:
   markdown-editor:

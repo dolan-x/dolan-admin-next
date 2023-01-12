@@ -10,10 +10,16 @@ export const router = createRouter({
   routes,
 });
 
-const a = $(useStorage("dolan-admin-token", ""));
+const token = $(useToken());
+
+watch(() => token, () => {
+  if (!token) {
+    router.push("/login");
+  }
+});
 
 router.beforeEach((from, _to, next) => {
-  if (from.path.startsWith("/dash") && !a) {
+  if (from.path.startsWith("/dash") && !token) {
     next("/login");
   }
   next();

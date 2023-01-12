@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-</script>
+const router = useRouter();
 
-<template>
-  <HelloWorld />
-</template>
+router.push("/dash");
+</script>

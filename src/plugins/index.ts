@@ -4,6 +4,7 @@ import { router } from "./router";
 import { vuetify } from "./vuetify";
 import { i18n } from "./i18n";
 import { initNprogress } from "./npgrogress";
+import { toast } from "./toast";
 
 export function registerPlugins(app: App) {
   initNprogress(router);
@@ -11,5 +12,6 @@ export function registerPlugins(app: App) {
     .use(vuetify)
     .use(i18n)
     .use(router)
-    .use(pinia);
+    .use(pinia)
+    .use(toast);
 }
