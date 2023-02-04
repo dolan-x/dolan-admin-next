@@ -27,6 +27,7 @@ specifiers:
   katex: ^0.16.4
   material-icons: ^1.13.1
   mini-cz: ^0.1.2
+  monaco-editor: ^0.34.1
   nprogress: ^0.2.0
   ofetch: ^1.0.0
   pinia: ^2.0.28
@@ -61,6 +62,7 @@ dependencies:
   '@vueuse/head': 1.0.22_vue@3.2.45
   katex: 0.16.4
   material-icons: 1.13.1
+  monaco-editor: 0.34.1
   nprogress: 0.2.0
   ofetch: 1.0.0
   pinia: 2.0.28_prq2uz4lho2pwp6irk4cfkrxwu
@@ -5144,6 +5146,10 @@ packages:
 
   /moment-mini/2.29.4:
     resolution: {integrity: sha512-uhXpYwHFeiTbY9KSgPPRoo1nt8OxNVdMVoTBYHfSEKeRkIkwGpO+gERmhuhBtzfaeOyTkykSrm2+noJBgqt3Hg==}
+    dev: false
+
+  /monaco-editor/0.34.1:
+    resolution: {integrity: sha512-FKc80TyiMaruhJKKPz5SpJPIjL+dflGvz4CpuThaPMc94AyN7SeC9HQ8hrvaxX7EyHdJcUY5i4D0gNyJj1vSZQ==}
     dev: false
 
   /mri/1.2.0:

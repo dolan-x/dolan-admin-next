@@ -13,8 +13,8 @@ const text = $computed(() => props.status === "published" ? t("pages.posts.filte
 
 <template>
   <VChip
-    class="ma-2"
     :color="color"
+    m="a-2"
     text-color="white"
   >
     {{ text }}

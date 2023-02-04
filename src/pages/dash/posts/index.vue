@@ -29,7 +29,7 @@ onMounted(async () => {
     <VBtn color="primary" to="./posts/new">
       {{ t('pages.posts.new-post') }}
     </VBtn>
-    <VTable>
+    <VTable m="t-3">
       <thead>
         <tr>
           <th>{{ t('pages.posts.title') }}</th>

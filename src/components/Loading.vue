@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <VOverlay class="align-center justify-center" :model-value="props.loading">
+  <VOverlay items-center justify-center :model-value="props.loading">
     <VProgressCircular
       indeterminate
       size="64"

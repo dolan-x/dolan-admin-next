@@ -14,6 +14,8 @@ declare module '@vue/runtime-core' {
     LayoutLoading: typeof import('./components/Layout/Loading.vue')['default']
     Loading: typeof import('./components/Loading.vue')['default']
     MilkdownEditor: typeof import('./components/MilkdownEditor.vue')['default']
+    MonacoEditor: typeof import('./components/MonacoEditor.vue')['default']
+    NoContent: typeof import('./components/NoContent.vue')['default']
     PostsStatus: typeof import('./components/Posts/Status.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
